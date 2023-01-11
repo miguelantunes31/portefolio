@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
+
+    <title>Portefólio</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <style>
+	.adeus {
+		width: 550px;
+        height: 50px;
+		background-color: rgba(256,256,256,0.4);
+        
+        position: absolute;
+        top:0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        
+        margin: auto;
+		
+		text-align: center;
+		
+		border-radius: 10px;
+		box-shadow: 0px 0px 300px 100px rgba(256,256,256,0.6);
+	}
+	
+	.h1{
+		color: #ffffff;
+		background-color: rgba(256,256,256,0.4);
+		border-radius: 10px;
+		box-shadow: 0px 0px 10px 3px rgba(256,256,256,0.6);
+	}
+	
+	.timer p{
+		color: #fffff;
+	}
+  </style>
+  <script>
+	function startTimer(duration, display) {
+		var timer = duration, minutes, seconds;
+		setInterval(function () {
+			seconds = parseInt(timer % 60, 10);
+
+			seconds = seconds < 10 ? + seconds : seconds;
+
+			display.textContent = seconds;
+
+			if (--timer < 0) {
+				timer = duration;
+			}
+			
+			if(seconds == 0){
+				window.location.href = 'https://www.google.pt/';
+			}
+		}, 1000);
+		};
+
+		window.onload = function () {
+			var fiveSeconds = 1;
+				display = 1
+			startTimer(fiveSeconds, display);
+		};
+  </script>
+    
+    <body>
+		<div class="adeus">
+			<h1 class="h1">Obrigado pela sua vizita ;)</h1>
+		</div>
+		<script src="js/jquery-2.1.0.min.js"></script>
+		<script src="js/popper.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/scrollreveal.min.js"></script>
+		<script src="js/waypoints.min.js"></script>
+		<script src="js/jquery.counterup.min.js"></script>
+		<script src="js/imgfix.min.js"></script> 
+		<script src="js/mixitup.js"></script> 
+		<script src="js/accordions.js"></script>
+		<script src="js/custom.js"></script>
+	</body>
+</html>
